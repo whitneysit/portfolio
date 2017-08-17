@@ -1,0 +1,130 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  margin: 0px;
+}
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: underline;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color:black;
+}
+
+#header {
+  overflow: auto;
+  background-color: white;
+}
+
+#header-navigation {
+  float: right;
+}
+#navigation-options {
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 24px;
+  padding-top: 20px;
+}
+.navigation-option {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+#header-name {
+  margin-left: 2%;
+  float: left;
+  padding: 20px;
+  font-size: 24px;
+}
+
+
+
+#name-box {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #CFD2E1;
+  padding: 200px;
+}
+#heading-description {
+  font-weight: normal;
+  font-size: 25px;
+}
+
+#heading-name {
+  font-size: 60px;
+  text-decoration: underline;
+}
+
+#about_me {
+  margin-right: 25%;
+  padding-top: 50px;
+  padding-bottom: 75px;
+  margin-left: 80px;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+
+
+#projects{
+  border-top-style: dotted;
+  border-color: #696969;
+  margin-right: 25%;
+  margin-left: 80px;
+  font-weight: normal;
+  font-size: 25px;
+  padding-bottom: 75px; 
+}
+
+#project-boxes{
+  padding-top: 30px; 
+}
+.project-box{
+  height: 200px; 
+  width: 200px; 
+  text-align: center; 
+  border-style:solid; 
+  border-color: #696969;
+  border-width: 1px;
+  background-image: url("https://image.freepik.com/free-vector/background-of-coming-soon-with-a-clock_1017-5059.jpg"); 
+  background-size: 100% 100%; 
+ 
+}
+
+.project-box:hover{
+  border-width: 2px;
+}
+
+
+#contact-me{
+  border-top-style: dotted;
+  border-color: #696969;
+  margin-right: 25%;
+  margin-left: 80px;
+  font-weight: normal;
+  font-size: 25px;
+  padding-bottom: 75px;
+}
+
+#bible-verse {
+  padding: 30px;
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  color: #696969;
+}
+
+#signature {
+  font-size: 12px;
+  text-align: center;
+  color: #696969;
+}
