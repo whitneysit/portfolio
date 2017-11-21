@@ -8,7 +8,6 @@ a {
 }
 
 a:link {
-  color: black;
   text-decoration: none;
 }
 a:active {
@@ -23,8 +22,10 @@ a:hover {
 }
 
 #header {
-  overflow: auto;
+  
+  overflow: hidden;
   background-color: white;
+  
 }
 
 #header-navigation {
@@ -117,12 +118,20 @@ a:hover {
 }
 
 #bible-verse {
-  padding: 30px;
+  padding-bottom: 10px;
   font-size: 15px;
   text-align: center;
   font-style: italic;
   color: #696969;
 }
+
+#social-media-buttons-footer, #social-media-buttons-header {
+  font-size: 36px; 
+  text-align: center;
+  color: #696969;
+  
+}
+
 
 #signature {
   font-size: 12px;
