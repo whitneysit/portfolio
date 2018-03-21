@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lights Out</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.light {
+		padding: 10px;
+	}
+	#game-content {
+		text-align: center;
+		vertical-align: center; 
+		position: absolute;
+    top: 35%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+		margin: auto;
+		z-index: 2; 
+	}
+	#start-content{
+		position: absolute;
+		top:10%;
+		bottom: 0;
+    left: 0;
+    right: 0;
+		margin: auto;
+		z-index: 3;
+
+	}
+</style>
+<body>
+
+
+<script type="text/javascript">
+var numOfMoves = 0; 
+var lightOff = "https://i.imgur.com/uGw2tWl.jpg"; 
+var lightOn = "https://i.imgur.com/IhRrSCX.jpg";
+
+function playGame(){
+	console.log("function called");
+	var num = document.getElementById("quantity").value; 
+	console.log(num);
+	htmlContent = ""; 
+	htmlContent += "<div id='lightBulbs' style='display:inline-block'>";
+	for (var i = 0; i < num; i++){
+		if (Math.random() > .5){
+			htmlContent += "<span class='light' id='light" + (i+1) +"'>"; 
+			htmlContent += "<img id='myImage' onclick='toggleLight(" + i + ")' src="+lightOff+" width=5% height=5%/>";
+			htmlContent += "</span>";	
+		}
+		else {
+			htmlContent += "<span class='light' id='light" + (i+1) +"'>"; 
+		htmlContent += "<img class='myImage' onclick='toggleLight(" + i + ")' src="+lightOn+" width=5% height=5%/>";
+		htmlContent += "</span>";	
+		}	
+	}
+	htmlContent += "</div>";
+	console.log(htmlContent);
+	document.getElementById('game-content').innerHTML = htmlContent; 
+	document.getElementById("start-content").innerHTML = "";
+	document.getElementById("start-content").style.zIndex = "0"; 
+}
+
+function flipImage(element){
+	if (element.childNodes[0].src === lightOn){
+		element.childNodes[0].src = lightOff;
+	}
+	else {
+		element.childNodes[0].src = lightOn;
+	}
+}
+
+function toggleLight(num){
+	numOfMoves++;
+	console.log("toggled");
+	var size = document.getElementsByClassName('light').length; 
+	flipImage(document.getElementsByClassName('light')[num]);
+	if ((num + 1) != size){
+		flipImage(document.getElementsByClassName('light')[num + 1]);
+	}
+	if ((num - 1) != -1 ){
+		flipImage(document.getElementsByClassName('light')[num - 1]);
+	}
+	if (isSolved()){
+		var htmlContent = "YOU WIN! with " + numOfMoves + " moves! </br></br>";
+		htmlContent += "<button class='btn' onclick='location.reload();'>Restart</button>";
+		document.getElementById("game-content").innerHTML = htmlContent; 
+
+
+	}
+
+}
+
+function isSolved(){
+	for (var i = 0; i < document.getElementsByClassName('light').length; i++){
+		if (document.getElementsByClassName('light')[i].childNodes[0].src === lightOn){
+			return false; 
+		}
+	}
+	return true; 
+}
+
+</script>
+
+<div id="start-content" style="text-align: center; width:25%; height:50%;">
+	<h1>Welcome to Lights Out!</h1>
+	<p>Please enter the number of light bulbs to want to play with.</p>
+	
+	<form action="#" onsubmit="playGame(); return false;">
+		<div class="col-xs-12">
+		<input class="form-control input" type="number" id="quantity" required>
+	</br>
+		<input class="btn" type='submit'>
+		</div>
+	</form>
+
+</div>
+
+<div id="game-content">
+
+</div>
+
+</body>
+</html> 
