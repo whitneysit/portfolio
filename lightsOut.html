@@ -38,6 +38,18 @@ body{
 	background-attachment: fixed;
     background-position: top; 
 	}
+	
+	#instructions{
+		text-align: center;
+		vertical-align: center; 
+		position: absolute;
+    top: 65%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+		margin: auto;
+		z-index: 2; 
+	}
 </style>
 <body>
 
@@ -129,6 +141,10 @@ function isSolved(){
 
 <div id="game-content">
 
+</div>
+	
+<div id="instructions">
+	<p>Goal: Turn all the lights off. </br> Click the light bulb to switch the light bulb and the ones next to it.</p>
 </div>
 
 </body>
