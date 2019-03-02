@@ -1,10 +1,12 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Bitter', serif;
   font-weight: lighter;
   margin: 0px;
+  color: #696969;
+  background-color: white;
 }
 a {
-  color: black;
+  color: #00887a;;
 }
 
 a:link {
@@ -17,15 +19,15 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
-  color:black;
+  font-weight: normal;
+  color: #696969;
 }
 
 #header {
   
   overflow: hidden;
-  background-color: white;
-  
+  background-color: #f7fff0;
+  font-weight: normal;
 }
 
 #header-navigation {
@@ -53,24 +55,24 @@ a:hover {
 #name-box {
   text-align: center;
   vertical-align: middle;
-  background-color: #CFD2E1;
-  padding: 200px;
+  background-color: #f0ffff;
+  color: #696969;
+  padding: 100px;
 }
 #heading-description {
-  font-weight: normal;
   font-size: 25px;
 }
 
 #heading-name {
-  font-size: 60px;
-  text-decoration: underline;
+  font-size: 45px;
 }
 
+h1 {
+  color: #00887a;
+}
 #about_me {
-  margin-right: 25%;
   padding-top: 50px;
   padding-bottom: 75px;
-  margin-left: 80px;
   font-weight: normal;
   font-size: 25px;
 }
@@ -80,19 +82,17 @@ a:hover {
 #projects{
   border-top-style: dotted;
   border-color: #696969;
-  margin-right: 25%;
-  margin-left: 80px;
   font-weight: normal;
   font-size: 25px;
   padding-bottom: 75px; 
 }
 
 #project-boxes{
-  padding-top: 30px; 
+  padding-top: 50px; 
 }
 .project-box{
-  height: 200px; 
-  width: 200px; 
+  height: 300px; 
+  width: 300px; 
   text-align: center; 
   border-style:solid; 
   border-color: #696969;
@@ -106,12 +106,12 @@ a:hover {
   border-width: 2px;
 }
 
-
+.project-row{
+  padding-bottom: 80px;
+}
 #contact-me{
   border-top-style: dotted;
   border-color: #696969;
-  margin-right: 25%;
-  margin-left: 80px;
   font-weight: normal;
   font-size: 25px;
   padding-bottom: 75px;
@@ -125,7 +125,13 @@ a:hover {
   color: #696969;
 }
 
-#social-media-buttons-footer, #social-media-buttons-header {
+#social-media-buttons-footer a, #social-media-buttons-header a{
+  font-size: 36px; 
+  text-align: center;
+  color: #696969;
+  
+}
+#social-media-buttons-footer, #social-media-buttons-header{
   font-size: 36px; 
   text-align: center;
   color: #696969;
